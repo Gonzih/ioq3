@@ -6,7 +6,9 @@ in
 stdenv.mkDerivation {
   name = "c2rust";
   buildInputs = [
+    pkgs.python37Packages.bootstrapped-pip
     pkgs.python37Packages.rencode
+    pkgs.python37Packages.virtualenv
     pkgs.SDL2
     pkgs.clang
     pkgs.cmake
